@@ -1,0 +1,42 @@
+{
+  "operation_mode": "batch",
+  "reaction_volume": 1.0,
+  "vessel_type": "quartz cuvette",
+  "path_length": 1.0,
+  "temperature": 25.0,
+  "mixing": "manual inversion",
+
+  "enzyme_name": "Lipase",
+  "ec_number": "3.1.1.3",
+  "source_organism": "Candida rugosa",
+  "enzyme_concentration": 0.05,
+  "storage_conditions": "-20 °C, aliquots",
+
+  "substrate_name": "p-nitrophenyl acetate",
+  "substrate_concentration": 1.0,
+  "cosolvent": "2% isopropanol",
+  "buffer": "Tris–HCl, 50 mM",
+  "pH": 8.0,
+
+  "measurement_wavelength": 405,
+  "extinction_coefficient": 18000,
+  "blank_description": "buffer + pNPA without enzyme",
+  "instrument": "UV–Vis spectrophotometer",
+
+  "raw_data_file": "pnp_assay_raw.csv",
+  "replicates": 3,
+  "rate_calculation": "Beer-Lambert law using dA/dt",
+  "unit_definition": "1 U = 1 µmol pNP/min",
+
+  "time_series": [
+    {"time": 0.0, "absorbance": 0.000},
+    {"time": 2.0, "absorbance": 0.052},
+    {"time": 4.0, "absorbance": 0.104}
+  ],
+
+  "kinetic_parameters": {
+    "Km": 0.45,
+    "Vmax": 12.3
+
+  }
+}
