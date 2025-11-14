@@ -1,0 +1,44 @@
+# LipaseAssay
+A data model describing a lipase-catalyzed hydrolysis assay of p-nitrophenyl acetate.
+
+## attributes
+operation_mode: string  
+reaction_volume: float  
+vessel_type: string  
+path_length: float  
+temperature: float  
+mixing: string  
+
+enzyme_name: string  
+ec_number: string  
+source_organism: string  
+enzyme_concentration: float  
+storage_conditions: string  
+
+substrate_name: string  
+substrate_concentration: float  
+cosolvent: string  
+buffer: string  
+pH: float  
+
+measurement_wavelength: float  
+extinction_coefficient: float  
+blank_description: string  
+instrument: string  
+
+raw_data_file: string  
+replicates: int  
+rate_calculation: string  
+unit_definition: string  
+kinetic_parameters: KineticParameters
+
+## collections
+time_series: TimePoint[]
+
+# TimePoint
+time: float  
+absorbance: float
+
+# KineticParameters
+Km: float  
+Vmax: float  
